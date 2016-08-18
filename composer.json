@@ -14,7 +14,17 @@
             "JeroenNoten\\LaravelCreateAdmin\\": "src/"
         }
     },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
     "require": {
         "laravel/framework": "^5.2"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.2",
+        "phpunit/phpunit": "~4.8",
+        "mockery/mockery": "^0.9.5"
     }
 }

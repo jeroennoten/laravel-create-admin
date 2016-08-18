@@ -36,7 +36,9 @@ class CreateAdmin extends Command
      */
     public function handle()
     {
-        User::create([
+        $class = config('auth.providers.users.model');
+
+        $class::create([
             'name' => $this->input->getOption('name') ?: '',
             'email' => $this->input->getArgument('email'),
             'password' => bcrypt($this->input->getArgument('password'))
